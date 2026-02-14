@@ -74,12 +74,22 @@ if __name__ == "__main__":
     clarifying_questions = clarifying_questions.strip()
     safe_advice = safe_advice.strip()
     
-    # Step 7: Compose Final Response (Deterministic)
+# Step 7: Compose Final Response (Generalized & Deterministic)
 
-    final_response = f"""
+symptoms = structured_data.get("symptoms", "the issue")
+location = structured_data.get("location", "the affected area")
+
+if symptoms != "Not Available" and location != "Not Available":
+    issue_summary = f"{symptoms.capitalize()} in the {location}"
+elif symptoms != "Not Available":
+    issue_summary = symptoms.capitalize()
+else:
+    issue_summary = "the issue described"
+
+final_response = f"""
 Hi, thank you for reaching out.
 
-Damp patches after heavy rain can certainly be concerning, and it’s good that you’re monitoring it.
+I understand that you're experiencing {issue_summary}. I can understand how that might be concerning.
 
 From what you've described, this appears to be related to {category}.
 
