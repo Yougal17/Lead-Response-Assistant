@@ -2,6 +2,7 @@
 
 A modular AI workflow that reads customer property enquiries and generates safe, structured, and human-like responses using an open-source LLM.
 
+
 🚀 Overview
 
 This project implements a structured AI pipeline for handling customer property issues such as:
@@ -9,6 +10,7 @@ This project implements a structured AI pipeline for handling customer property 
 “I am getting damp patches on my bedroom wall after heavy rain.”
 
 Instead of a single LLM call, the system follows a multi-step reasoning workflow to ensure reliability and reduce hallucinations.
+
 
 🏗 Architecture
 User Query
@@ -26,6 +28,7 @@ Safe Advice Generation
 Validation Guard (Rule-based)
    ↓
 Deterministic Final Response Composition
+
 
 🔍 Key Design Decisions
 ✅ Structured Before Generative
@@ -83,6 +86,7 @@ Model used:
 
 llama3.1:8b-instruct-q4_0
 
+
 📂 Project Structure
 lead_response_assistant/
 │
@@ -108,6 +112,7 @@ pip install requests
 4️⃣ Run
 python main.py
 
+
 💡 Example Behavior
 
 Input
@@ -126,6 +131,7 @@ Safe homeowner advice
 No diagnosis
 
 No false promises
+
 
 🔒 Reliability Features
 
@@ -149,6 +155,7 @@ Open-source model may require prompt tuning for edge cases
 
 CLI-based interface (no frontend)
 
+
 🔮 Future Improvements
 
 Add automatic retry for malformed JSON
@@ -161,6 +168,7 @@ Deploy via FastAPI
 
 Add evaluation test suite
 
+
 🎯 Why This Matters
 
 This project demonstrates:
@@ -172,3 +180,4 @@ Hallucination mitigation
 Hybrid deterministic + LLM architecture
 
 Production-oriented system thinking
+
